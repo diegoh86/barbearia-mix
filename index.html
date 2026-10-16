@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbearia Mix | Rio Comprido - Corte, Barba, Clube e Cursos</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="A experiência definitiva em barbearia clássica e moderna no Rio Comprido. Corte de cabelo degradê, barboterapia com toalha quente, chopp gelado, clube de assinatura e curso de barbeiro.">
+  <meta name="keywords" content="Barbearia Rio Comprido, corte masculino Rio de Janeiro, barbearia Paulo de Frontin, Barbearia Mix, curso de barbeiro rj, clube de assinatura barbearia">
+  <meta name="author" content="Barbearia Mix">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diegoh86.github.io/barbearia-mix/">
+  <meta property="og:title" content="Barbearia Mix | Rio Comprido - Corte, Barba e Estilo">
+  <meta property="og:description" content="Mais que uma barbearia, um estilo de vida e autoestima. Corte, barba, ambiente climatizado, clube de assinaturas e curso profissional.">
+  <meta property="og:image" content="https://diegoh86.github.io/barbearia-mix/assets/img/logo.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Barbearia Mix">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+
+  <!-- Google Fonts: Prata (Títulos Clássicos do Template) + Work Sans + Lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Prata&family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#C5A880',        // Tom dourado vintage do template
+              goldDark: '#9E8A78',
+              yellow: '#FFDE00',      // Amarelo da marca
+              dark: '#111215',        // Fundo escuro do template
+              darker: '#0B0C0E',
+              cardDark: '#181A1F',
+              borderDark: '#2C303A',
+              light: '#F8F6F0',       // Fundo claro vintage (off-white / marfim)
+              lightAlt: '#EDE9E0',    // Variação clara para alternância
+              cardLight: '#FFFFFF',
+              borderLight: '#DDD7CA',
+              textDark: '#1C1E22',
+              textMuted: '#5C6068'
+            }
+          },
+          fontFamily: {
+            serif: ['Prata', 'serif'],
+            heading: ['"Work Sans"', 'sans-serif'],
+            sans: ['Lato', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Divisor Clássico com Linha e Tesoura Central */
+    .heading-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin: 15px auto 25px;
+      max-width: 240px;
+    }
+    .heading-line::before, .heading-line::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #C5A880, transparent);
+    }
+
+    /* Linha pontilhada conectora de cardápio clássico (Dots Leader) */
+    .price-dots {
+      flex: 1;
+      border-bottom: 2px dotted rgba(197, 168, 128, 0.45);
+      margin: 0 10px 6px;
+    }
+
+    /* Botão angular clássico do template */
+    .default-btn {
+      font-family: 'Work Sans', sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 13px 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: #C5A880;
+      color: #0B0C0E;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid #C5A880;
+    }
+    .default-btn:hover {
+      background-color: transparent;
+      color: #C5A880;
+    }
+
+    .default-btn-outline {
+      font-family: 'Work Sans', sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 13px 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .default-btn-outline:hover {
+      border-color: #C5A880;
+      color: #C5A880;
+      background-color: rgba(197, 168, 128, 0.08);
+    }
+
+    .default-btn-dark {
+      font-family: 'Work Sans', sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 13px 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: #181A1F;
+      color: #FFFFFF;
+      transition: all 0.3s ease;
+      border: 1px solid #181A1F;
+    }
+    .default-btn-dark:hover {
+      background-color: #C5A880;
+      border-color: #C5A880;
+      color: #0B0C0E;
+    }
+
+    /* Moldura Vintage das Imagens */
+    .vintage-frame {
+      position: relative;
+      border: 3px solid #C5A880;
+      padding: 6px;
+      background-color: #14161B;
+      box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease;
+    }
+    .vintage-frame:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+
+  <!-- Carrega a tabela centralizada de preços e dados em Português -->
+  <script src="assets/js/pricing-data.js"></script>
+</head>
+<body class="bg-brand-dark text-neutral-300 font-sans antialiased selection:bg-brand-gold selection:text-black">
+
+  <!-- 1. TOP BAR CLÁSSICA (ESCURA) -->
+  <div class="bg-brand-darker border-b border-brand-borderDark/80 py-2.5 text-xs text-neutral-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2">
+          <i class="fa-solid fa-location-dot text-brand-gold"></i>
+          Av. Paulo de Frontin, 516 - Loja F, Rio Comprido
+        </span>
+        <span class="hidden md:flex items-center gap-2">
+          <i class="fa-regular fa-clock text-brand-gold"></i>
+          Seg a Qui: 09h às 19h | Sex: 09h às 20h | Sáb: 09h às 18h
+        </span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="https://wa.me/5521994599535" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors flex items-center gap-1.5 font-semibold text-white">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> (21) 99459-9535
+        </a>
+        <span class="text-neutral-700">|</span>
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/barbeariamix/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://web.facebook.com/p/Barbearia-Mix-100083649621339/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.trinks.com/barbeariamix" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors" aria-label="Trinks">
+            <i class="fa-solid fa-calendar-check"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. NAVBAR (ESCURA, COM MENOS ITENS E MAIS ESPAÇOSA) -->
+  <header class="sticky top-0 z-50 bg-[#0F1013]/95 backdrop-blur-md border-b border-brand-borderDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo ampliada -->
+        <a href="#inicio" class="flex items-center py-2 group">
+          <img src="assets/img/logo.png" alt="Barbearia Mix" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <!-- Menu Desktop Enxuto e Elegante -->
+        <nav class="hidden md:flex items-center gap-7 lg:gap-9 font-heading text-xs uppercase tracking-widest font-semibold">
+          <a href="#inicio" class="text-white hover:text-brand-gold transition-colors">Início</a>
+          <a href="#sobre" class="text-neutral-300 hover:text-brand-gold transition-colors">Sobre</a>
+          <a href="#servicos" class="text-neutral-300 hover:text-brand-gold transition-colors">Serviços</a>
+          <a href="#precos" class="text-neutral-300 hover:text-brand-gold transition-colors">Preços</a>
+          <a href="#clube" class="text-neutral-300 hover:text-brand-gold transition-colors">Club Mix</a>
+          <a href="#curso" class="text-brand-gold hover:text-white transition-colors">Curso</a>
+          <a href="#localizacao" class="text-neutral-300 hover:text-brand-gold transition-colors">Contato</a>
+        </nav>
+
+        <!-- CTA do Header -->
+        <div class="hidden sm:flex items-center">
+          <a href="https://www.trinks.com/barbeariamix" target="_blank" rel="noopener noreferrer" class="default-btn shadow-md">
+            Agendar Horário
+          </a>
+        </div>
+
+        <!-- Botão Mobile -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" class="text-neutral-400 hover:text-white p-2 focus:outline-none" aria-label="Abrir Menu">
+            <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-darker border-b border-brand-borderDark px-6 pt-4 pb-6 space-y-3 font-heading uppercase text-xs tracking-wider">
+      <a href="#inicio" class="mobile-link block py-2 text-white hover:text-brand-gold">Início</a>
+      <a href="#sobre" class="mobile-link block py-2 text-neutral-300 hover:text-brand-gold">Sobre a Barbearia</a>
+      <a href="#servicos" class="mobile-link block py-2 text-neutral-300 hover:text-brand-gold">Serviços</a>
+      <a href="#precos" class="mobile-link block py-2 text-neutral-300 hover:text-brand-gold">Cardápio de Preços</a>
+      <a href="#clube" class="mobile-link block py-2 text-neutral-300 hover:text-brand-gold">Club Mix (Assinatura)</a>
+      <a href="#curso" class="mobile-link block py-2 text-brand-gold font-bold">Curso de Barbeiro</a>
+      <a href="#avaliacoes" class="mobile-link block py-2 text-neutral-300 hover:text-brand-gold">Avaliações</a>
+      <a href="#localizacao" class="mobile-link block py-2 text-neutral-300 hover:text-brand-gold">Onde Estamos</a>
+      <div class="pt-3 border-t border-neutral-800 space-y-2">
+        <a href="https://www.trinks.com/barbeariamix" target="_blank" rel="noopener noreferrer" class="w-full default-btn text-center block">
+          Agendar pelo Trinks
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3. SEÇÃO 1: HERO (FUNDO ESCURO ATMOSFÉRICO) -->
+    <section id="inicio" class="relative min-h-[600px] lg:min-h-[680px] flex items-center justify-center text-center overflow-hidden border-b border-brand-borderDark">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=80" alt="Ambiente Barbearia Mix" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0F1013] via-[#0F1013]/85 to-[#0F1013]/70"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 space-y-5">
+        <h3 class="font-heading uppercase text-xs sm:text-sm tracking-[0.25em] text-brand-gold font-bold">
+          Tradição, Estilo & Cortes Clássicos
+        </h3>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif text-white tracking-wide leading-[1.15]">
+          A Barbearia com a Experiência Mais Completa do Rio Comprido
+        </h1>
+
+        <div class="heading-line">
+          <i class="fa-solid fa-scissors text-brand-gold text-sm"></i>
+        </div>
+
+        <p class="text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto leading-relaxed font-sans font-light">
+          <span class="italic text-brand-gold font-serif">"Mais que uma barbearia, um estilo de vida e autoestima."</span><br>
+          Cortes impecáveis, barboterapia tradicional com toalha quente, chopp gelado e ambiente climatizado.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-3">
+          <a href="https://www.trinks.com/barbeariamix" target="_blank" rel="noopener noreferrer" class="default-btn shadow-2xl">
+            <i class="fa-solid fa-calendar-check text-xs"></i>
+            Agendar Horário Online
+          </a>
+          <a href="#curso" class="default-btn-outline shadow-xl">
+            <i class="fa-solid fa-graduation-cap text-xs"></i>
+            Curso de Barbeiro
+          </a>
+        </div>
+
+        <div class="pt-6">
+          <div class="inline-flex items-center gap-3 bg-brand-darker/80 border border-brand-borderDark px-5 py-2.5 rounded-full shadow-lg">
+            <div class="flex text-amber-400 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-xs font-heading uppercase tracking-wider font-bold text-white">4.8 no Google</span>
+            <span class="text-neutral-600">•</span>
+            <span class="text-xs text-neutral-300 font-sans">+590 avaliações de clientes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SEÇÃO 2: SOBRE NÓS (FUNDO CLARO VINTAGE / MARFIM - IGUAL AO TEMPLATE) -->
+    <section id="sobre" class="py-24 bg-brand-light text-brand-textDark border-b border-brand-borderLight relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+          
+          <!-- Texto Sobre -->
+          <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+            <h3 class="font-heading uppercase text-xs sm:text-sm tracking-[0.2em] text-brand-goldDark font-bold">
+              Nossa Essência
+            </h3>
+
+            <h2 class="text-3xl sm:text-5xl font-serif text-brand-textDark leading-tight">
+              A Tradição & Excelência da <br><span class="text-brand-goldDark">Barbearia Mix</span>
+            </h2>
+
+            <div class="heading-line lg:mx-0">
+              <i class="fa-solid fa-scissors text-brand-goldDark text-sm"></i>
+            </div>
+
+            <p class="text-brand-textMuted font-sans leading-relaxed text-sm sm:text-base">
+              A <strong>Barbearia Mix</strong> foi criada para quem aprecia qualidade superior, atendimento de confiança e visual impecável. Localizada na Av. Paulo de Frontin, 516, unimos o ritual clássico da navalha com as técnicas mais requisitadas de corte e degradê.
+            </p>
+
+            <p class="text-brand-textMuted font-sans leading-relaxed text-sm sm:text-base">
+              Nosso espaço é 100% climatizado, conta com chopp gelado, café fresco, Wi-Fi liberado e profissionais experientes prontos para atender adultos e crianças com o mais alto padrão.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+              <div class="p-4 bg-white border border-brand-borderLight text-center shadow-sm">
+                <i class="fa-solid fa-beer-mug-empty text-brand-goldDark text-2xl mb-2"></i>
+                <h4 class="font-heading uppercase text-xs font-bold text-brand-textDark">Bar & Bebidas</h4>
+                <p class="text-[11px] text-brand-textMuted mt-0.5">Chopp e cortesia</p>
+              </div>
+
+              <div class="p-4 bg-white border border-brand-borderLight text-center shadow-sm">
+                <i class="fa-solid fa-snowflake text-brand-goldDark text-2xl mb-2"></i>
+                <h4 class="font-heading uppercase text-xs font-bold text-brand-textDark">Climatizado</h4>
+                <p class="text-[11px] text-brand-textMuted mt-0.5">Ambiente fresco</p>
+              </div>
+
+              <div class="p-4 bg-white border border-brand-borderLight text-center shadow-sm col-span-2 sm:col-span-1">
+                <i class="fa-solid fa-users text-brand-goldDark text-2xl mb-2"></i>
+                <h4 class="font-heading uppercase text-xs font-bold text-brand-textDark">Família</h4>
+                <p class="text-[11px] text-brand-textMuted mt-0.5">Adulto & Infantil</p>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="https://wa.me/5521994599535" target="_blank" rel="noopener noreferrer" class="default-btn-dark">
+                Falar no WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Colagem Fotográfica Vintage -->
+          <div class="lg:col-span-6 grid grid-cols-2 gap-4 relative">
+            <div class="space-y-4">
+              <div class="vintage-frame">
+                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Corte na Tesoura" class="w-full h-56 object-cover">
+              </div>
+              <div class="vintage-frame">
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Degradê e Fade" class="w-full h-44 object-cover">
+              </div>
+            </div>
+
+            <div class="pt-8 space-y-4">
+              <div class="vintage-frame">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Barboterapia com Toalha Quente" class="w-full h-64 object-cover">
+              </div>
+              
+              <div class="bg-white border-2 border-brand-goldDark p-4 text-center shadow-md">
+                <span class="font-serif text-3xl font-bold text-brand-goldDark">5.0★</span>
+                <p class="font-heading text-xs uppercase tracking-wider text-brand-textDark font-bold mt-1">Nota no Trinks</p>
+                <p class="text-[11px] text-brand-textMuted">Satisfação Comprovada</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SEÇÃO 3: SERVIÇOS & ESPECIALIDADES (FUNDO CLARO COMPLEMENTAR) -->
+    <section id="servicos" class="py-24 bg-brand-lightAlt text-brand-textDark border-b border-brand-borderLight relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+          <h3 class="font-heading uppercase text-xs sm:text-sm tracking-[0.2em] text-brand-goldDark font-bold">
+            Especialidades da Casa
+          </h3>
+          <h2 class="text-3xl sm:text-5xl font-serif text-brand-textDark">
+            Nossos Serviços Profissionais
+          </h2>
+          <div class="heading-line">
+            <i class="fa-solid fa-scissors text-brand-goldDark text-sm"></i>
+          </div>
+          <p class="text-brand-textMuted font-sans text-sm sm:text-base">
+            Equipamentos esterilizados, produtos de alta linha e precisão artesanal em cada corte.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="bg-white border border-brand-borderLight hover:border-brand-goldDark p-8 text-center transition-all duration-300 hover:-translate-y-2 shadow-sm">
+            <div class="w-16 h-16 rounded-full border-2 border-brand-goldDark text-brand-goldDark flex items-center justify-center mx-auto text-2xl mb-6">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <h3 class="font-serif text-xl text-brand-textDark mb-3">Cortes Personalizados</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed font-sans">Degradê (fade), cortes clássicos na tesoura e acabamentos limpos com lâmina.</p>
+          </div>
+
+          <div class="bg-white border border-brand-borderLight hover:border-brand-goldDark p-8 text-center transition-all duration-300 hover:-translate-y-2 shadow-sm">
+            <div class="w-16 h-16 rounded-full border-2 border-brand-goldDark text-brand-goldDark flex items-center justify-center mx-auto text-2xl mb-6">
+              <i class="fa-solid fa-user-ninja"></i>
+            </div>
+            <h3 class="font-serif text-xl text-brand-textDark mb-3">Barba & Toalha Quente</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed font-sans">Barboterapia completa, toalha quente, massagem facial e hidratação profunda.</p>
+          </div>
+
+          <div class="bg-white border border-brand-borderLight hover:border-brand-goldDark p-8 text-center transition-all duration-300 hover:-translate-y-2 shadow-sm">
+            <div class="w-16 h-16 rounded-full border-2 border-brand-goldDark text-brand-goldDark flex items-center justify-center mx-auto text-2xl mb-6">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="font-serif text-xl text-brand-textDark mb-3">Estética Masculina</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed font-sans">Design de sobrancelha na lâmina e camuflagem natural de fios brancos.</p>
+          </div>
+
+          <div class="bg-white border border-brand-borderLight hover:border-brand-goldDark p-8 text-center transition-all duration-300 hover:-translate-y-2 shadow-sm">
+            <div class="w-16 h-16 rounded-full border-2 border-brand-goldDark text-brand-goldDark flex items-center justify-center mx-auto text-2xl mb-6">
+              <i class="fa-solid fa-crown"></i>
+            </div>
+            <h3 class="font-serif text-xl text-brand-textDark mb-3">Clube de Vantagens</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed font-sans">Planos mensais com cortes ou barbas ilimitadas para você economizar o mês todo.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. SEÇÃO 4: CARDÁPIO DE PREÇOS COM LINHAS PONTILHADAS (FUNDO ESCURO CARVÃO) -->
+    <section id="precos" class="py-24 bg-[#121418] text-neutral-300 border-b border-brand-borderDark relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+          <h3 class="font-heading uppercase text-xs sm:text-sm tracking-[0.2em] text-brand-gold font-bold">
+            Tabela de Preços & Procedimentos
+          </h3>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white">
+            Cardápio Barbearia Mix
+          </h2>
+          <div class="heading-line">
+            <i class="fa-solid fa-scissors text-brand-gold text-sm"></i>
+          </div>
+          <p class="text-neutral-400 font-sans text-sm sm:text-base">
+            Valores transparentes e justos. Escolha o procedimento e agende seu horário online em menos de 1 minuto.
+          </p>
+        </div>
+
+        <!-- Grade com as 3 Colunas Clássicas (Renderizado Dinamicamente via JS) -->
+        <div id="pricing-columns-container" class="grid lg:grid-cols-3 gap-8">
+          <!-- Inserido dinamicamente pelo renderPricingMenu() a partir de BARBEARIA_PRECOS -->
+        </div>
+
+        <div class="mt-16 text-center border-t border-brand-borderDark pt-10">
+          <p class="text-sm text-neutral-300 mb-4 font-sans">
+            Deseja agendar diretamente com seu barbeiro favorito pelo aplicativo?
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://www.trinks.com/barbeariamix" target="_blank" rel="noopener noreferrer" class="default-btn shadow-lg">
+              <i class="fa-solid fa-calendar-check text-xs"></i>
+              Agendar no Sistema Trinks
+            </a>
+            <a href="https://wa.me/5521994599535" target="_blank" rel="noopener noreferrer" class="default-btn-outline shadow-md">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
+              Agendar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. SEÇÃO 5: PLANOS DE ASSINATURA CLUB MIX (FUNDO CLARO VINTAGE) -->
+    <section id="clube" class="py-24 bg-brand-light text-brand-textDark border-b border-brand-borderLight relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+          <h3 class="font-heading uppercase text-xs sm:text-sm tracking-[0.2em] text-brand-goldDark font-bold">
+            Vantagens Exclusivas
+          </h3>
+          <h2 class="text-3xl sm:text-5xl font-serif text-brand-textDark">
+            Planos de Assinatura <span class="text-brand-goldDark">Club Mix</span>
+          </h2>
+          <div class="heading-line">
+            <i class="fa-solid fa-scissors text-brand-goldDark text-sm"></i>
+          </div>
+          <p class="text-brand-textMuted font-sans text-sm sm:text-base">
+            Corte o cabelo ou alinhe a barba quantas vezes precisar no mês por uma mensalidade fixa. Economia e praticidade para você estar sempre alinhado.
+          </p>
+        </div>
+
+        <!-- Grade Dinâmica dos Planos -->
+        <div id="club-plans-container" class="grid md:grid-cols-3 gap-8 items-stretch">
+          <!-- Inserido dinamicamente pelo renderClubPlans() a partir de BARBEARIA_PRECOS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. SEÇÃO 6: CURSO DE BARBEIRO PROFISSIONAL (FUNDO ESCURO DE FORMAÇÃO) -->
+    <section id="curso" class="py-24 bg-[#101216] text-neutral-300 border-b border-brand-borderDark relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <h3 class="font-heading uppercase text-xs sm:text-sm tracking-[0.2em] text-brand-gold font-bold">
+              Formação Profissional
+            </h3>
+
+            <h2 class="text-3xl sm:text-5xl font-serif text-white leading-tight">
+              Torne-se um Barbeiro com o <br><span class="text-brand-gold">Curso Barbearia Mix</span>
+            </h2>
+
+            <div class="heading-line ml-0">
+              <i class="fa-solid fa-scissors text-brand-gold text-sm"></i>
+            </div>
+
+            <p class="text-neutral-300 font-sans leading-relaxed text-sm sm:text-base">
+              Aprenda a profissão que mais cresce no mercado masculino diretamente na bancada com barbeiros atuantes em uma das barbearias mais bem avaliadas do Rio de Janeiro.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-start gap-3 bg-brand-darker p-4 border border-brand-borderDark">
+                <i class="fa-solid fa-check text-brand-gold text-sm mt-0.5"></i>
+                <div>
+                  <h4 class="font-heading uppercase text-xs font-bold text-white">Do Zero ao Avançado</h4>
+                  <p class="text-xs text-neutral-400 mt-0.5">Técnicas de tesoura, máquina, navalhete, degradê navalhado e visagismo.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 bg-brand-darker p-4 border border-brand-borderDark">
+                <i class="fa-solid fa-check text-brand-gold text-sm mt-0.5"></i>
+                <div>
+                  <h4 class="font-heading uppercase text-xs font-bold text-white">Prática Real em Modelos</h4>
+                  <p class="text-xs text-neutral-400 mt-0.5">Cortes ao vivo em pessoas reais para você ganhar segurança rápida de atendimento.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 bg-brand-darker p-4 border border-brand-borderDark">
+                <i class="fa-solid fa-check text-brand-gold text-sm mt-0.5"></i>
+                <div>
+                  <h4 class="font-heading uppercase text-xs font-bold text-white">Certificado & Oportunidade</h4>
+                  <p class="text-xs text-neutral-400 mt-0.5">Certificado de conclusão e chance de fazer parte do time da Barbearia Mix.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="https://docs.google.com/forms/d/1xIREd6qfhmNDXEp2_00ceWyQBwzm7rH5tWgdk1GJUBo/viewform" target="_blank" rel="noopener noreferrer" class="default-btn shadow-xl">
+                <i class="fa-solid fa-file-signature text-xs"></i>
+                Preencher Formulário de Inscrição Oficial
+              </a>
+            </div>
+          </div>
+
+          <!-- Card Ilustrativo do Curso -->
+          <div class="lg:col-span-6">
+            <div class="vintage-frame p-8 text-center space-y-6">
+              <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=1000&q=80" alt="Curso de Barbeiro Profissional" class="w-full h-64 object-cover mb-4">
+              
+              <h3 class="font-serif text-2xl text-white">Turmas com Vagas Reduzidas</h3>
+              <p class="text-xs text-neutral-300 font-sans leading-relaxed">
+                Aulas práticas com turmas reduzidas para acompanhamento de perto pelos nossos barbeiros.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 border-t border-brand-borderDark pt-4 text-xs font-heading uppercase font-bold text-neutral-300">
+                <div class="border-r border-brand-borderDark">
+                  <span class="text-brand-gold block text-sm">Rio Comprido</span>
+                  <span class="text-[10px] text-neutral-500">Localização</span>
+                </div>
+                <div>
+                  <span class="text-brand-gold block text-sm">Certificado</span>
+                  <span class="text-[10px] text-neutral-500">Ao Concluir</span>
+                </div>
+              </div>
+
+              <a href="https://docs.google.com/forms/d/1xIREd6qfhmNDXEp2_00ceWyQBwzm7rH5tWgdk1GJUBo/viewform" target="_blank" rel="noopener noreferrer" class="w-full default-btn text-center block">
+                Garantir Minha Vaga no Curso
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. SEÇÃO 7: DEPOIMENTOS DE CLIENTES (FUNDO CLARO VINTAGE) -->
+    <section id="avaliacoes" class="py-24 bg-brand-light text-brand-textDark border-b border-brand-borderLight relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+          <h3 class="font-heading uppercase text-xs sm:text-sm tracking-[0.2em] text-brand-goldDark font-bold">
+            Reputação Comprovada
+          </h3>
+          <h2 class="text-3xl sm:text-5xl font-serif text-brand-textDark">
+            O Que Dizem Nossos Clientes
+          </h2>
+          <div class="heading-line">
+            <i class="fa-solid fa-scissors text-brand-goldDark text-sm"></i>
+          </div>
+          <p class="text-brand-textMuted font-sans text-sm sm:text-base">
+            Depoimentos 5 estrelas capturados diretamente no Google Reviews e Trinks.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <div class="bg-white border border-brand-borderLight p-8 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <i class="fa-solid fa-quote-left text-brand-goldDark text-3xl opacity-60"></i>
+              <p class="font-sans text-sm italic text-brand-textMuted leading-relaxed">
+                "Meu filho corta cabelo com Helton há bastante tempo e só tenho elogios. Não só a ele, mas à todos os profissionais. Super recomendo!"
+              </p>
+              <div class="flex text-amber-500 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-brand-borderLight mt-6">
+              <h4 class="font-serif text-base text-brand-textDark">Cinthia Santos</h4>
+              <p class="font-heading uppercase text-[10px] text-brand-goldDark tracking-widest font-bold">Avaliação no Google</p>
+            </div>
+          </div>
+
+          <div class="bg-white border border-brand-borderLight p-8 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <i class="fa-solid fa-quote-left text-brand-goldDark text-3xl opacity-60"></i>
+              <p class="font-sans text-sm italic text-brand-textMuted leading-relaxed">
+                "Muito bom! É a segunda vez que eu fui e sempre bem atendido com uma cerveja gelada, obrigado a todos especialmente ao Vicent excelente profissional que corta meu cabelo e barba."
+              </p>
+              <div class="flex text-amber-500 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-brand-borderLight mt-6">
+              <h4 class="font-serif text-base text-brand-textDark">Pedro Beltrão</h4>
+              <p class="font-heading uppercase text-[10px] text-brand-goldDark tracking-widest font-bold">Carioca Voo Livre • Google</p>
+            </div>
+          </div>
+
+          <div class="bg-white border border-brand-borderLight p-8 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <i class="fa-solid fa-quote-left text-brand-goldDark text-3xl opacity-60"></i>
+              <p class="font-sans text-sm italic text-brand-textMuted leading-relaxed">
+                "Excelente atendimento! O Caio é um profissional extremamente competente e o serviço na barbearia é impecável do começo ao fim. Recomendo demais!"
+              </p>
+              <div class="flex text-amber-500 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-brand-borderLight mt-6">
+              <h4 class="font-serif text-base text-brand-textDark">Josué Santos</h4>
+              <p class="font-heading uppercase text-[10px] text-brand-goldDark tracking-widest font-bold">Avaliação no Google</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="https://g.page/r/CSF3WteAzAEXEBM/review" target="_blank" rel="noopener noreferrer" class="default-btn-dark">
+            <i class="fa-brands fa-google text-xs mr-2"></i>
+            Ver Todas as Mais de 590 Avaliações no Google Maps
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. SEÇÃO 8: LOCALIZAÇÃO, HORÁRIOS & MAPA EMBUTIDO (FUNDO ESCURO) -->
+    <section id="localizacao" class="py-24 bg-brand-dark text-neutral-300 relative border-b border-brand-borderDark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <h3 class="font-heading uppercase text-xs sm:text-sm tracking-[0.2em] text-brand-gold font-bold">
+              Como Chegar
+            </h3>
+            <h2 class="text-3xl sm:text-5xl font-serif text-white">
+              Nossa Barbearia no Rio Comprido
+            </h2>
+            <div class="heading-line ml-0">
+              <i class="fa-solid fa-scissors text-brand-gold text-sm"></i>
+            </div>
+
+            <div class="space-y-4 font-sans text-sm">
+              <div class="p-5 bg-brand-darker border border-brand-borderDark flex items-start gap-4">
+                <i class="fa-solid fa-location-dot text-brand-gold text-xl shrink-0 mt-1"></i>
+                <div>
+                  <h4 class="font-heading uppercase text-xs font-bold text-white mb-1">Endereço</h4>
+                  <p class="text-neutral-300">Av. Paulo de Frontin, 516 - Loja F</p>
+                  <p class="text-xs text-neutral-500">Rio Comprido, Rio de Janeiro - RJ, CEP 20261-241</p>
+                </div>
+              </div>
+
+              <div class="p-5 bg-brand-darker border border-brand-borderDark flex items-start gap-4">
+                <i class="fa-regular fa-clock text-brand-gold text-xl shrink-0 mt-1"></i>
+                <div class="w-full">
+                  <h4 class="font-heading uppercase text-xs font-bold text-white mb-2">Horários de Atendimento</h4>
+                  <div class="space-y-1.5 text-xs text-neutral-400">
+                    <div class="flex justify-between border-b border-neutral-800 pb-1">
+                      <span>Segunda a Quinta:</span>
+                      <strong class="text-white">09:00 às 19:00</strong>
+                    </div>
+                    <div class="flex justify-between border-b border-neutral-800 py-1">
+                      <span>Sexta-feira:</span>
+                      <strong class="text-brand-gold">09:00 às 20:00 (Estendido)</strong>
+                    </div>
+                    <div class="flex justify-between border-b border-neutral-800 py-1">
+                      <span>Sábado:</span>
+                      <strong class="text-white">09:00 às 18:00</strong>
+                    </div>
+                    <div class="flex justify-between pt-1 text-neutral-600">
+                      <span>Domingo:</span>
+                      <span>Fechado</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-5 bg-brand-darker border border-brand-borderDark flex items-start gap-4">
+                <i class="fa-brands fa-whatsapp text-emerald-400 text-xl shrink-0 mt-1"></i>
+                <div>
+                  <h4 class="font-heading uppercase text-xs font-bold text-white mb-1">Telefone & WhatsApp</h4>
+                  <a href="https://wa.me/5521994599535" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-bold">
+                    (21) 99459-9535
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 pt-2">
+              <a href="https://maps.google.com/maps?daddr=Avenida%20Paulo%20de%20Frontin,%20516,%20Loja%20F%20,%20Rio%20Comprido,%20Rio%20de%20Janeiro,%20RJ" target="_blank" rel="noopener noreferrer" class="flex-1 default-btn text-center text-xs">
+                Traçar Rota no Maps
+              </a>
+              <a href="https://waze.com/ul?q=Avenida%20Paulo%20de%20Frontin%20516%20Rio%20de%20Janeiro" target="_blank" rel="noopener noreferrer" class="flex-1 default-btn-outline text-center text-xs">
+                Abrir no Waze
+              </a>
+            </div>
+          </div>
+
+          <!-- Mapa Embutido Google Maps -->
+          <div class="lg:col-span-7">
+            <div class="vintage-frame h-[460px] lg:h-[530px] relative">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.887754636302!2d-43.2123816238053!3d-22.92461567924467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f33357d260f%3A0x1701cc80d75a7721!2sBarbearia%20Mix%20%7C%20Rio%20Comprido!5e0!3m2!1spt-BR!2sbr!4v1713290000000!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="100%" 
+                style="border:0; filter: invert(90%) hue-rotate(180deg);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa Barbearia Mix Rio Comprido">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. FOOTER (ESCURO EM 4 COLUNAS COM ASSINATURA DHA CONSULTORIA) -->
+  <footer class="bg-brand-darker border-t border-brand-borderDark pt-16 pb-12 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-neutral-800">
+        
+        <!-- Coluna 1: Sobre & Logo -->
+        <div class="space-y-4">
+          <img src="assets/img/logo.png" alt="Barbearia Mix" class="h-12 w-auto object-contain">
+          <p class="text-xs text-neutral-400 leading-relaxed font-sans">
+            A barbearia que é referência de tradição, cuidado masculino e autoestima no Rio Comprido.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.instagram.com/barbeariamix/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 border border-brand-borderDark text-neutral-300 hover:text-brand-gold hover:border-brand-gold flex items-center justify-center transition-colors" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://web.facebook.com/p/Barbearia-Mix-100083649621339/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 border border-brand-borderDark text-neutral-300 hover:text-brand-gold hover:border-brand-gold flex items-center justify-center transition-colors" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/5521994599535" target="_blank" rel="noopener noreferrer" class="w-9 h-9 border border-brand-borderDark text-neutral-300 hover:text-emerald-400 hover:border-emerald-400 flex items-center justify-center transition-colors" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.trinks.com/barbeariamix" target="_blank" rel="noopener noreferrer" class="w-9 h-9 border border-brand-borderDark text-neutral-300 hover:text-brand-gold hover:border-brand-gold flex items-center justify-center transition-colors" aria-label="Trinks">
+              <i class="fa-solid fa-calendar-check"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação -->
+        <div class="space-y-3 font-heading uppercase text-xs tracking-wider">
+          <h4 class="text-white font-bold border-b border-brand-borderDark pb-2">Navegação</h4>
+          <ul class="space-y-2 text-neutral-400 font-sans normal-case text-xs">
+            <li><a href="#inicio" class="hover:text-brand-gold transition-colors">Início</a></li>
+            <li><a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre a Barbearia</a></li>
+            <li><a href="#servicos" class="hover:text-brand-gold transition-colors">Nossos Serviços</a></li>
+            <li><a href="#precos" class="hover:text-brand-gold transition-colors">Cardápio de Preços</a></li>
+            <li><a href="#clube" class="hover:text-brand-gold transition-colors">Club Mix (Assinatura)</a></li>
+            <li><a href="#curso" class="hover:text-brand-gold transition-colors">Curso Profissional de Barbeiro</a></li>
+            <li><a href="#localizacao" class="hover:text-brand-gold transition-colors">Onde Estamos</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Horários -->
+        <div class="space-y-3 font-heading uppercase text-xs tracking-wider">
+          <h4 class="text-white font-bold border-b border-brand-borderDark pb-2">Horários de Atendimento</h4>
+          <div class="space-y-2 text-xs text-neutral-400 font-sans normal-case">
+            <p><strong>Segunda a Quinta:</strong><br> 09:00 às 19:00</p>
+            <p><strong>Sexta-feira:</strong><br> 09:00 às 20:00 (Estendido)</p>
+            <p><strong>Sábado:</strong><br> 09:00 às 18:00</p>
+            <p><strong>Domingo:</strong><br> Fechado</p>
+          </div>
+        </div>
+
+        <!-- Coluna 4: Agendamento -->
+        <div class="space-y-3 font-heading uppercase text-xs tracking-wider">
+          <h4 class="text-white font-bold border-b border-brand-borderDark pb-2">Agende Seu Horário</h4>
+          <p class="text-xs text-neutral-400 font-sans normal-case leading-relaxed">
+            Agendamento online 24h sem fila ou diretamente com nossa recepção no WhatsApp.
+          </p>
+          <div class="pt-2 space-y-2">
+            <a href="https://www.trinks.com/barbeariamix" target="_blank" rel="noopener noreferrer" class="w-full default-btn text-center block text-[11px] py-3">
+              Agendar no Trinks
+            </a>
+            <a href="https://wa.me/5521994599535" target="_blank" rel="noopener noreferrer" class="w-full default-btn-outline text-center block text-[11px] py-2.5">
+              WhatsApp: (21) 99459-9535
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Rodapé com Assinatura Obrigatória DHA Consultoria -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4 font-sans">
+        <p>&copy; 2026 Barbearia Mix | Rio Comprido. Todos os direitos reservados.</p>
+        <p>
+          Desenvolvido por <a href="https://dhaconsultoria.com.br" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:underline font-bold">DHA Consultoria</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5521994599535?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Barbearia%20Mix." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba59] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 group focus:outline-none" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <span class="absolute right-16 bg-neutral-900 text-white text-xs font-semibold px-3 py-1.5 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-neutral-800">
+      Agendar no WhatsApp
+    </span>
+  </a>
+
+  <!-- SCRIPT DE RENDERIZAÇÃO DINÂMICA DO CARDÁPIO & CLUB MIX -->
+  <script>
+    // 1. Renderiza o Cardápio Clássico em 3 Colunas com Linhas Pontilhadas (Dot Leaders)
+    function renderPricingMenu() {
+      const container = document.getElementById('pricing-columns-container');
+      if (!container || typeof BARBEARIA_PRECOS === 'undefined') return;
+
+      let html = '';
+      BARBEARIA_PRECOS.categorias.forEach(cat => {
+        let itemsHtml = '';
+        cat.itens.forEach(item => {
+          itemsHtml += `
+            <li class="group">
+              <div class="flex items-baseline justify-between">
+                <a href="${item.agendarUrl}" target="_blank" rel="noopener noreferrer" class="font-serif text-base sm:text-lg text-white group-hover:text-brand-gold transition-colors">
+                  ${item.nome}
+                </a>
+                <div class="price-dots"></div>
+                <span class="font-heading font-black text-brand-gold text-base sm:text-lg shrink-0">
+                  ${item.precoFormatado}
+                </span>
+              </div>
+              <div class="flex items-center justify-between mt-1">
+                <p class="text-xs text-neutral-400 font-sans font-light">${item.descricao}</p>
+                <a href="${item.agendarUrl}" target="_blank" rel="noopener noreferrer" class="text-[10px] font-heading uppercase text-neutral-500 hover:text-brand-gold ml-2 shrink-0">
+                  Agendar &rarr;
+                </a>
+              </div>
+            </li>
+          `;
+        });
+
+        html += `
+          <div class="bg-brand-cardDark border border-brand-borderDark p-8 shadow-xl relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 pb-4 mb-6 border-b border-brand-borderDark">
+                <div class="w-10 h-10 rounded-full border border-brand-gold/40 text-brand-gold flex items-center justify-center text-sm">
+                  <i class="${cat.icone}"></i>
+                </div>
+                <div>
+                  <h3 class="font-serif text-xl text-white">${cat.titulo}</h3>
+                  <p class="text-[11px] text-neutral-400 font-sans">${cat.descricao}</p>
+                </div>
+              </div>
+
+              <ul class="space-y-6">
+                ${itemsHtml}
+              </ul>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // 2. Renderiza os Planos do Club Mix na Seção Clara
+    function renderClubPlans() {
+      const container = document.getElementById('club-plans-container');
+      if (!container || typeof BARBEARIA_PRECOS === 'undefined') return;
+
+      let html = '';
+      BARBEARIA_PRECOS.planosAssinatura.forEach(plano => {
+        const isDestaque = plano.destaque;
+        const cardStyle = isDestaque 
+          ? 'bg-[#181A1F] text-white border-2 border-brand-gold shadow-2xl relative md:-translate-y-2' 
+          : 'bg-white text-brand-textDark border border-brand-borderLight shadow-sm';
+
+        let benefitsHtml = '';
+        plano.beneficios.forEach(b => {
+          benefitsHtml += `
+            <li class="flex items-center gap-3 text-xs sm:text-sm ${isDestaque ? 'text-neutral-300' : 'text-brand-textMuted'}">
+              <i class="fa-solid fa-check ${isDestaque ? 'text-brand-gold' : 'text-brand-goldDark'} text-xs shrink-0"></i>
+              <span>${b}</span>
+            </li>
+          `;
+        });
+
+        html += `
+          <div class="${cardStyle} p-8 flex flex-col justify-between">
+            ${isDestaque ? `<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-gold text-black text-[10px] font-heading uppercase font-black px-4 py-1 tracking-widest shadow">Mais Escolhido</div>` : ''}
+
+            <div class="space-y-6">
+              <div>
+                <span class="font-heading uppercase text-xs tracking-widest ${isDestaque ? 'text-brand-gold' : 'text-brand-goldDark'} font-bold">${plano.badge}</span>
+                <h3 class="text-2xl font-serif ${isDestaque ? 'text-white' : 'text-brand-textDark'} mt-1">${plano.nome}</h3>
+                <p class="text-xs ${isDestaque ? 'text-neutral-400' : 'text-brand-textMuted'} font-sans mt-2">${plano.subtitulo}</p>
+              </div>
+
+              <div class="py-4 border-y ${isDestaque ? 'border-brand-borderDark' : 'border-brand-borderLight'}">
+                <div class="flex items-baseline gap-1">
+                  <span class="text-sm font-heading ${isDestaque ? 'text-neutral-400' : 'text-brand-textMuted'}">R$</span>
+                  <span class="text-4xl font-serif font-bold ${isDestaque ? 'text-white' : 'text-brand-textDark'}">${plano.preco.toFixed(2).replace('.', ',')}</span>
+                  <span class="text-xs ${isDestaque ? 'text-neutral-400' : 'text-brand-textMuted'} font-sans">${plano.periodo}</span>
+                </div>
+                <p class="text-[11px] text-emerald-500 font-sans font-medium mt-1">${plano.economia}</p>
+              </div>
+
+              <ul class="space-y-3 font-sans">
+                ${benefitsHtml}
+              </ul>
+            </div>
+
+            <div class="pt-8">
+              <a href="${plano.checkoutUrl}" target="_blank" rel="noopener noreferrer" class="w-full ${isDestaque ? 'default-btn' : 'default-btn-dark'} text-center block">
+                Assinar ${plano.nome}
+              </a>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // Inicialização ao carregar o DOM
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPricingMenu();
+      renderClubPlans();
+
+      // Mobile Menu
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.toggle('hidden');
+          if (isHidden) {
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+          } else {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
+          }
+        });
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
